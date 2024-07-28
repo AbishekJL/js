@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <style>
+        #container{
+            text-align: center;
+            
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 50;
+            height: 100%;
+            background-color: rgb(22, 22, 22);
+            color: rgba(173, 170, 170, 0.932);
+            box-sizing: border-box(90,100);
+            padding-bottom: 40PX;
+            padding-top: 10PX;
+        }
+        #result{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 50;
+            height: 100%;
+            background-color: rgb(22, 22, 22);
+            color: rgba(173, 170, 170, 0.932);
+            box-sizing: border-box(90,100);
+            padding-bottom: 40PX;
+            padding-top: 40PX;
+        }
+        .inputdiv{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 200px;
+            height:auto
+           
+            color: rgb(22, 22, 22);
+            box-sizing: border-box(50,100);
+            padding-bottom: 20PX;
+        }
+        
+        </style>
+
+    
+
+</head>
+<body>
+    <div id="container">
+        <h1>cm to inches converter</h1>
+        <div class="inputdiv"><input type="number" id="cm" placeholder="enter the value"></div>
+        <div><button type="submit" onclick="convert()">Covert cm to inches</button></div>
+        <div id="result"></div>
+    </div>
+    <script>
+        function convert(){
+            let cmac=Number(document.getElementById("cm").value);
+            let inches=cmac/2.54
+            let result= document.getElementById("result")
+            result.innerHTML=inches.toFixed(2)+" inches"
+        }
+    </script>
+    
+</body>
+</html>
